@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* l'élément enfant aura les propriétés du parent */
+    font-family: "Poppins";
+}
+
+#container {
+    display: flex;
+    font-family: "Poppins";
+    background: radial-gradient(rgb(139, 195, 245),#1294b8);
+    min-height: 100vh;
+}
+
+
+/* ========================================================================================
+===========================================HEADER========================================
+========================================================================================= */
+
+
+/* -------------------------------------nav------------------------------------------------ */
+
+header {
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+#name-site {
+    font-weight: 700;
+}
+
+#nav-links {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+/* --------------------------------TEXT + FORM---------------------------- */
+
+#header-description {
+    display: flex;
+    align-items: center;
+    padding: 60px 190px;
+}
+
+#header-text h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    padding-bottom: 15px;
+}
+
+#header-text p {
+    font-weight: 300;
+}
+
+form {
+    display: flex;
+    margin: 15px;
+}
+
+input {
+    border-radius: 30px;
+    padding: 8px;
+    border: 1px solid grey;
+}
+
+button {
+    background:rgba(71, 149, 212, 0.986);
+    color: #ffffff;
+    border-radius: 30px;
+    padding: 8px;
+    border: 1px solid grey;
+}
+
+button:hover {
+    background:rgba(91, 152, 202, 0.836);
+}
+
+ #header-illustration img {
+    max-width: 100%;
+        height: auto;
+    }
+
+
+
+/* ========================================================================================
+=====================================PRODUCT FEATURES=====================================
+========================================================================================= */
+
+
+
+
+
+
+
+
+
+
+/* ========================================================================================
+===========================================RESPONSIVE========================================
+========================================================================================= */
+
+@media screen and (max-width: 700px) {
+    #wrapper {
+        padding: 0;
+    }
+
+    #container {
+        background: radial-gradient(rgb(139, 195, 245),#1294b8);
+    min-height: 100vh;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    #header-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #header-text h2 {
+        font-size: 20px;
+    }
+
+   
+}
