@@ -10,11 +10,16 @@
 
 #container {
     display: flex;
+    flex-wrap: wrap;
     font-family: "Poppins";
     background: radial-gradient(rgb(139, 195, 245),#1294b8);
     min-height: 100vh;
 }
 
+main {
+    display: flex;
+    background : white;
+}
 
 /* ========================================================================================
 ===========================================HEADER========================================
@@ -115,8 +120,38 @@ button:hover {
 
 
 
+#product-features {
+    display: flex;
+    align-items: center;
+    padding: 60px 190px;
+}
 
+.product-features-text p {
+    font-weight: 300;
+    color: grey;
+}
 
+#features-cards {
+    display: flex;
+    gap: 1em;
+}
+.card {
+    color: #ffffff;
+    background: radial-gradient(rgb(139, 195, 245),#1294b8);
+    size: 500px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    size: 50px;
+}
+
+.card-text p {
+    font-weight: 300;
+    font-size: small;
+}
 
 
 
