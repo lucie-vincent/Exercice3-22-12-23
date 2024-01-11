@@ -209,6 +209,7 @@ button:hover {
 
     #team {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         padding: 60px 190px;
@@ -221,6 +222,7 @@ button:hover {
     
     .team-text h3 {
         font-size: 30px;
+        padding-bottom: 5px;
     }
 
     .team-text p {
@@ -233,17 +235,64 @@ button:hover {
 
     #team-cards {
         display: flex;
-        flex-wrap: wrap;
-        gap: 5em;
+        flex-direction: row;
     }
     
-    .card-team {
+    /* .card-team {
         min-height: 300px;
+    } */
+
+    .card-team-header {
+        text-align: center;
+    }
+
+    .card-team-header p {
+        font-size: small;
+        font-weight: 200;
+        color: grey;
+    }
+
+    .card-team-footer {
+        text-align: center;
+    }
+
+    .card-team-footer p {
+        font-size: small;
+        font-weight: 200;
+        color: grey;
     }
 
     .card-team-image img {
-        max-height: 100px;
+        max-height: 200px;
+        filter: grayscale(1.1);
+        border-radius: 50%;
+        transition: 0.5s;
     }
+
+    .card-team-image img:hover {
+        transform: scale(1.1);
+        filter: grayscale(0);
+    }
+    
+    .card-team-image img:hover .reseaux-team {
+        top: 0px;
+        left: 0px;
+    }
+    
+    .reseaux-team {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 25px;
+        left: -25px;
+    }
+
+    .reseaux-team:hover {
+        cursor: pointer;
+    }
+
+
+
 
 /* ========================================================================================
 ===========================================RESPONSIVE========================================
