@@ -131,7 +131,17 @@ button:hover {
 #product-features {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 60px 190px;
+}
+
+.product-features-text {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    size: 70px;
+    padding: 15px 200px 45px;
 }
 
 .product-features-text p {
@@ -142,18 +152,26 @@ button:hover {
 #features-cards {
     display: flex;
     gap: 1em;
+    padding: 0px 80px;
 }
+
 .card {
     color: #ffffff;
     background: radial-gradient(rgb(139, 195, 245),#1294b8);
-    size: 500px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 
+    0px 20px 25px -5px, 
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    padding: 45px;
 }
 
-.card-image {
-    size: 50px;
+.fa-solid {
+    font-size: 45px;
 }
 
 .card-text p {
