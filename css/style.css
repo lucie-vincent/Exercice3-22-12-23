@@ -18,6 +18,7 @@
 
 main {
     display: flex;
+    flex-wrap: wrap;
     background : white;
 }
 
@@ -30,6 +31,7 @@ main {
 
 header {
     align-items: center;
+    min-height: 100vh;
 }
 
 nav {
@@ -70,8 +72,9 @@ a:hover {
 
 #header-description {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 60px 190px;
+    padding: 100px 190px;
 }
 
 #header-text {
@@ -123,71 +126,103 @@ button:hover {
 
 
 
+    /* ========================================================================================
+    =====================================PRODUCT FEATURES=====================================
+    ========================================================================================= */
+    
+    
+    
+    #product-features {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 190px;
+        min-height: 100vh;
+    }
+    
+    .product-features-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        size: 70px;
+        padding: 15px 370px 45px;
+    }
+
+    .product-features-text h3 {
+        font-size: 35px;
+    }
+    
+    .product-features-text p {
+        font-weight: 400;
+        color: grey;
+    }
+    
+    #features-cards {
+        display: flex;
+        gap: 1em;
+        padding: 0px 80px;
+    }
+    
+    .card {
+        color: #ffffff;
+        background: radial-gradient(rgb(139, 195, 245),#1294b8);
+        /* box-shadow: rgba(0, 0, 0, 0.1) 
+        0px 20px 25px -5px, 
+        rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 300px;
+        padding: 45px;
+        transition: 0.5s;
+    }
+    
+    .card:hover {
+        transform: translateY(-20px);
+    }
+    
+    .fa-solid {
+        font-size: 45px;
+        padding-bottom: 30px;
+    }
+    
+    .card-text p {
+        font-weight: 300;
+        font-size: small;
+    }
+
 /* ========================================================================================
-=====================================PRODUCT FEATURES=====================================
-========================================================================================= */
+    =====================================TEAMS=====================================
+    ========================================================================================= */
 
+    #team {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 190px;
+        min-height: 100vh;
+    }
 
+    .team-text {
+        text-align: center;
+    }
+    
+    .team-text h3 {
+        font-size: 30px;
+    }
 
-#product-features {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 190px;
-}
-
-.product-features-text {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    size: 70px;
-    padding: 15px 200px 45px;
-}
-
-.product-features-text p {
-    font-weight: 300;
-    color: grey;
-}
-
-#features-cards {
-    display: flex;
-    gap: 1em;
-    padding: 0px 80px;
-}
-
-.card {
-    color: #ffffff;
-    background: radial-gradient(rgb(139, 195, 245),#1294b8);
-    /* box-shadow: rgba(0, 0, 0, 0.1) 
-    0px 20px 25px -5px, 
-    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px;
-    padding: 45px;
-    transition: 0.5s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.fa-solid {
-    font-size: 45px;
-}
-
-.card-text p {
-    font-weight: 300;
-    font-size: small;
-}
-
-
-
-
+    .team-text p {
+        font-weight: 400;
+        color: grey;
+    }
+    
+    
+    
 
 /* ========================================================================================
 ===========================================RESPONSIVE========================================
