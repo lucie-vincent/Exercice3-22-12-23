@@ -109,6 +109,7 @@ button {
     border-radius: 30px;
     padding: 8px;
     border: 1px solid grey;
+    text-transform: uppercase;
 }
 
 button:hover {
@@ -168,6 +169,11 @@ button:hover {
     align-items: center;
     min-height: 300px;
     padding: 45px;
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
 
 .fa-solid {
