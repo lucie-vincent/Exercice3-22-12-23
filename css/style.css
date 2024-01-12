@@ -218,7 +218,7 @@ button:hover {
         justify-content: center;
         padding: 60px 190px;
         min-height: 100vh;
-        width: 100%;
+        
     }
 
     .team-text {
@@ -239,16 +239,17 @@ button:hover {
 /* --------------------------------CARDS---------------------------- */
 
     #team-cards {
+        width: 100%;
         display: flex;
         flex-direction: row;
         gap: 10em;
     }
     
-    /* .card-team {
-        ;
-    } */
+    .card-team {
+        border-radius: 50%;
+    }
 
-    .card-team-header {
+    /* .card-team-header {
         text-align: center;
         padding-bottom: 3em;
     }
@@ -291,7 +292,7 @@ button:hover {
         font-size: small;
         font-weight: 200;
         color: grey;
-    }
+    } */
 
 /* ========================================================================================
 ===========================================RESPONSIVE========================================
