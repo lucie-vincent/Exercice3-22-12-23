@@ -130,7 +130,6 @@ button:hover {
 }
 
 
-
 /* ========================================================================================
 =====================================PRODUCT FEATURES=====================================
 ========================================================================================= */
@@ -237,7 +236,45 @@ button:hover {
 
 /* --------------------------------CARDS---------------------------- */
 
-#team {
+#team-cards {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.team-cards-card {
+    /* border: 1px solid red; */
+    width: 25em;
+    border-radius: 50%;
+}
+
+.team-card-image {
+    border-radius: 50%;
+    margin: 2em;
+    overflow: hidden;
+}
+
+.team-card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    filter: grayscale(1);
+    transition: 1s;
+}
+
+.team-card-image img:hover {
+    transform: scale(1.1);
+    filter: none;
+}
+
+.team-card-footer p {
+    font-size: small;
+    font-weight: 200;
+    color: grey;
+}
+
+/* #team {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -246,7 +283,7 @@ button:hover {
 
 .team-card-image-block {
     border-radius: 50%;
-}
+} */
 
 /* .card-team-header {
     text-align: center;
