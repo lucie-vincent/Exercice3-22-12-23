@@ -40,7 +40,7 @@ nav {
     justify-content: space-evenly;
 }
 
-#name-site {
+#site-name {
     font-weight: 700;
     font-size: larger;
 }
@@ -69,13 +69,13 @@ a:hover {
     opacity: 0.75;
 }
 
-#reseaux-header i {
+#header-social i {
     font-size:larger;
 }
 
 /* --------------------------------TEXT + FORM---------------------------- */
 
-#header-description {
+#header-description-block {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -124,175 +124,173 @@ button:hover {
     background:rgba(91, 152, 202, 0.836);
 }
 
- #header-illustration img {
+#header-illustration img {
     max-width: 100%;
-        height: auto;
-    }
+    height: auto;
+}
 
 
 
-    /* ========================================================================================
-    =====================================PRODUCT FEATURES=====================================
-    ========================================================================================= */
-    
-    /* --------------------------------TEXT ---------------------------- */
+/* ========================================================================================
+=====================================PRODUCT FEATURES=====================================
+========================================================================================= */
 
-    
-    #product-features {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 60px 190px;
-        min-height: 100vh;
-        width: 100%;
-    }
-    
-    .product-features-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 15px 350px 45px;
-    }
+/* --------------------------------TEXT ---------------------------- */
 
-    .product-features-text h3 {
-        font-size: 35px;
-    }
-    
-    .product-features-text p {
-        font-weight: 400;
-        color: grey;
-    }
-    
+
+#product-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 190px;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.product-features-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 350px 45px;
+}
+
+.product-features-text h3 {
+    font-size: 35px;
+}
+
+.product-features-text p {
+    font-weight: 400;
+    color: grey;
+}
+
 /* --------------------------------CARDS---------------------------- */
 
 
-    #features-cards {
-        display: flex;
-        gap: 1em;
-        padding: 0px 80px;
-        justify-content: space-evenly;
-    }
-    
-    .card {
-        color: #ffffff;
-        background: radial-gradient(rgb(139, 195, 245),#1294b8);
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        min-height: 300px;
-        padding: 45px;
-        transition: 0.5s;
-    }
-    
-    .card:hover {
-        transform: translateY(-20px);
-    }
-    
-    .fa-solid {
-        font-size: 45px;
-        padding-bottom: 30px;
-    }
-    
-    .card-text p {
-        font-weight: 300;
-        font-size: small;
-    }
+#features-cards {
+    display: flex;
+    gap: 1em;
+    padding: 0px 80px;
+    justify-content: space-evenly;
+}
+
+.features-cards-card {
+    color: #ffffff;
+    background: radial-gradient(rgb(139, 195, 245),#1294b8);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 300px;
+    padding: 45px;
+    transition: 0.5s;
+}
+
+.features-cards-card-card:hover {
+    transform: translateY(-20px);
+}
+
+.fa-solid {
+    font-size: 45px;
+    padding-bottom: 30px;
+}
+
+.card-text p {
+    font-weight: 300;
+    font-size: small;
+}
 
 /* ========================================================================================
-    =====================================TEAMS=====================================
-    ========================================================================================= */
+=====================================TEAMS=====================================
+========================================================================================= */
 
 /* --------------------------------TEXT---------------------------- */
 
 
-    #team {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 60px 190px;
-        min-height: 100vh;
-        
-    }
+#team {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 190px;
+    min-height: 100vh;
+}
 
-    .team-text {
-        text-align: center;
-    }
-    
-    .team-text h3 {
-        font-size: 30px;
-        padding-bottom: 5px;
-    }
+.team-text {
+    text-align: center;
+}
 
-    .team-text p {
-        font-weight: 400;
-        color: grey;
-    }
-    
+.team-text h3 {
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.team-text p {
+    font-weight: 400;
+    color: grey;
+}
+
 
 /* --------------------------------CARDS---------------------------- */
 
-    #team-cards {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        gap: 10em;
-    }
-    
-    .card-team {
-        border-radius: 50%;
-    }
+#team {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10em;
+}
 
-    /* .card-team-header {
-        text-align: center;
-        padding-bottom: 3em;
-    }
+.team-card-image-block {
+    border-radius: 50%;
+}
 
-    .card-team-header p {
-        font-size: small;
-        font-weight: 200;
-        color: grey;
-    }
+/* .card-team-header {
+    text-align: center;
+    padding-bottom: 3em;
+}
 
-    
-    .card-team-image img {
-        max-height: 200px;
-        filter: grayscale(1.1);
-        border-radius: 50%;
-        transition: 0.5s;
-    }
-    
-    .card-team-pictures:hover img {
-        transform: scale(1.1);
-        filter: none;
-    }
-    
-    .reseaux-team {
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-    }
-    
-    .reseaux-team:hover {
-        cursor: pointer;
-    }
-    
-    .card-team-footer {
-        text-align: center;
-        padding-top: 2em;
-    }
+.card-team-header p {
+    font-size: small;
+    font-weight: 200;
+    color: grey;
+}
 
-    .card-team-footer p {
-        font-size: small;
-        font-weight: 200;
-        color: grey;
-    } */
+.card-team-image img {
+    max-height: 200px;
+    filter: grayscale(1.1);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.card-team-pictures:hover img {
+    transform: scale(1.1);
+    filter: none;
+}
+
+.reseaux-team {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
+
+.reseaux-team:hover {
+    cursor: pointer;
+}
+
+.card-team-footer {
+    text-align: center;
+    padding-top: 2em;
+}
+
+.card-team-footer p {
+    font-size: small;
+    font-weight: 200;
+    color: grey;
+} */
 
 /* ========================================================================================
 ===========================================RESPONSIVE========================================
@@ -315,7 +313,7 @@ button:hover {
         width: auto;
     }
 
-    #header-description {
+    #header-description-block {
         display: flex;
         flex-direction: column;
         justify-content: center;
