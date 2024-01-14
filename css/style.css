@@ -148,12 +148,14 @@ button:hover {
 }
 
 .product-features-text {
+    width:30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 15px 350px 45px;
+    margin: 15px auto 45px;
+    /* padding: 15px 350px 45px; */
 }
 
 .product-features-text h3 {
@@ -222,11 +224,12 @@ button:hover {
 
 .team-text {
     text-align: center;
+    margin-bottom: 55px;
 }
 
 .team-text h3 {
     font-size: 30px;
-    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .team-text p {
@@ -275,60 +278,6 @@ button:hover {
     color: grey;
 }
 
-/* #team {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 10em;
-}
-
-.team-card-image-block {
-    border-radius: 50%;
-} */
-
-/* .card-team-header {
-    text-align: center;
-    padding-bottom: 3em;
-}
-
-.card-team-header p {
-    font-size: small;
-    font-weight: 200;
-    color: grey;
-}
-
-.card-team-image img {
-    max-height: 200px;
-    filter: grayscale(1.1);
-    border-radius: 50%;
-    transition: 0.5s;
-}
-
-.card-team-pictures:hover img {
-    transform: scale(1.1);
-    filter: none;
-}
-
-.reseaux-team {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-}
-
-.reseaux-team:hover {
-    cursor: pointer;
-}
-
-.card-team-footer {
-    text-align: center;
-    padding-top: 2em;
-}
-
-.card-team-footer p {
-    font-size: small;
-    font-weight: 200;
-    color: grey;
-} */
 
 /* ========================================================================================
 =====================================PARALLAX=====================================
@@ -338,7 +287,6 @@ button:hover {
     min-height: 50vh;
     min-width: 100vh;
     color: white;  
-    /* filter: opacity(50%); */
     
 }
 
@@ -352,19 +300,30 @@ button:hover {
 }
 
 .parallax-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* opacity: .6; */
     min-height: 50vh;
     min-width: 100vh;
     background-size: cover;
-    background-color: black;
-    opacity: .6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.parallax-text h3, .parallax-text p, .parallax-text a {
+    opacity: 0.8;
+}
+
+.parallax-text h3 {
+    font-weight:500;
+}
+
 .parallax-text p {
+    text-align: center;
+    width: 60%;
     font-weight: 200;
+    margin: 15px 0px;
 }
 
 .parallax-link {
@@ -375,11 +334,13 @@ button:hover {
     border: 1px solid white;
     border-radius: 5px;
     padding: 7px 15px;
+    transition: 0.8s;
 }
 
 .parallax-link a:hover {
     background-color: white;
-    color: black
+    color: rgba(10, 10, 10, 0.836);
+    opacity: 1;
 }
 
 /* ========================================================================================
@@ -405,7 +366,6 @@ footer {
     gap:2em;
     border: #ffffff;
 }
-
 
 
 /* ========================================================================================
