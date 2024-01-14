@@ -189,7 +189,7 @@ button:hover {
     transition: 0.5s;
 }
 
-.features-cards-card-card:hover {
+.features-cards-card:hover {
     transform: translateY(-20px);
 }
 
