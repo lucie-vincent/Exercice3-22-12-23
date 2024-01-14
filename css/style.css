@@ -21,6 +21,7 @@ main {
     width: 100%;
 }
 
+
 /* ========================================================================================
 ===========================================HEADER========================================
 ========================================================================================= */
@@ -329,6 +330,57 @@ button:hover {
     color: grey;
 } */
 
+/* ========================================================================================
+=====================================PARALLAX=====================================
+========================================================================================= */
+
+#parallax-block {
+    min-height: 50vh;
+    min-width: 100vh;
+    color: white;  
+    /* filter: opacity(50%); */
+    
+}
+
+.parallax {
+    width: 100%;
+    background-image: url(/img/parallax.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-text {
+    min-height: 50vh;
+    min-width: 100vh;
+    background-size: cover;
+    background-color: black;
+    opacity: .6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-text p {
+    font-weight: 200;
+}
+
+.parallax-link {
+    margin-top: 25px;
+}
+
+.parallax-link a {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 7px 15px;
+}
+
+.parallax-link a:hover {
+    background-color: white;
+    color: black
+}
 
 /* ========================================================================================
 ===========================================FOOTER========================================
