@@ -173,11 +173,13 @@ button:hover {
 #features-cards {
     display: flex;
     gap: 1em;
-    padding: 0px 80px;
+    padding: 0% 5%;
     justify-content: space-evenly;
 }
 
 .features-cards-card {
+    width: 350px;
+    height: 350px;
     color: #ffffff;
     background: radial-gradient(rgb(139, 195, 245),#1294b8);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
