@@ -42,36 +42,30 @@ nav {
 }
 
 #site-name {
-    font-weight: 700;
-    font-size: larger;
+  font-size: 25px;
+  font-weight: 800;
 }
 
-#nav-links {
+#nav-links ul, #nav-links li, #nav-links a {
     text-transform: uppercase;
     font-weight: 300;
-    font-size:larger ;
-}
-
-
-ul {
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     list-style-type: none;
     gap: 10px;
-}
-
-a {
     text-decoration: none;
     color: #ffffff;
 }
 
-a:hover {
+#nav-links a:hover {
     cursor: pointer;
     opacity: 0.75;
 }
 
 #header-social i {
     font-size:larger;
+    list-style-type: none;
 }
 
 /* --------------------------------TEXT + FORM---------------------------- */
@@ -344,6 +338,31 @@ button:hover {
     color: rgba(10, 10, 10, 0.836);
     opacity: 1;
 }
+
+/* ========================================================================================
+=====================================BLOG=====================================
+========================================================================================= */
+
+#blog {
+    min-width: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-card-footer h3 {
+    font-weight: 500;
+}
+
+.blog-card-footer p {
+    font-weight: 200;
+}
+
+
+
+
 
 /* ========================================================================================
 ===========================================FOOTER========================================
