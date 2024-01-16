@@ -36,7 +36,6 @@ ul, li, a {
 header {
     align-items: center;
     min-width: 100vh;
-    min-height: 100vh;
 }
 
 nav {
@@ -47,7 +46,7 @@ nav {
 }
 
 #site-name {
-  font-size: 2em;
+  font-size: 25px;
   font-weight: 800;
 }
 
