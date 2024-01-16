@@ -21,6 +21,10 @@ main {
     width: 100%;
 }
 
+ul, li, a {
+    text-decoration: none;
+    list-style: none;
+}
 
 /* ========================================================================================
 ===========================================HEADER========================================
@@ -31,7 +35,7 @@ main {
 
 header {
     align-items: center;
-    min-height: 100vh;
+    min-width: 100vh;
 }
 
 nav {
@@ -46,15 +50,17 @@ nav {
   font-weight: 800;
 }
 
+#site-name a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
 #nav-links ul, #nav-links li, #nav-links a {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 20px;
     display: flex;
-    flex-direction: row;
-    list-style-type: none;
     gap: 10px;
-    text-decoration: none;
     color: #ffffff;
 }
 
@@ -63,10 +69,24 @@ nav {
     opacity: 0.75;
 }
 
-#header-social i {
-    font-size:larger;
-    list-style-type: none;
+#header-social {
+    display: flex;
+    flex-direction: row;
 }
+
+#header-social i {
+    font-size:25px;
+    color: #ffffff;
+}
+
+#header-social ul, #header-social li, #header-social a {
+   display: flex;
+   flex-direction: row;
+   gap: 2rem;
+   color: #ffffff;
+}
+
+
 
 /* --------------------------------TEXT + FORM---------------------------- */
 
@@ -137,7 +157,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     padding: 60px 190px;
-    min-height: 100vh;
+    min-width: 100vh;
     width: 100%;
 }
 
@@ -215,7 +235,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     padding: 60px 190px;
-    min-height: 100vh;
+    min-width: 100vh;
 }
 
 .team-text {
@@ -297,10 +317,10 @@ button:hover {
 
 .parallax-text {
     background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
     /* opacity: .6; */
     min-height: 50vh;
     min-width: 100vh;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -330,6 +350,7 @@ button:hover {
     border: 1px solid white;
     border-radius: 5px;
     padding: 7px 15px;
+    color: #ffffff;
     transition: 0.8s;
 }
 
@@ -352,14 +373,58 @@ button:hover {
     justify-content: center;
 }
 
+.blog-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    gap: 2em;
+    margin: 5%;
+}
+
+.blog-card-header {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.blog-card-user-infos {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: baseline;
+}
+
+.blog-card-date-infos {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: baseline;
+}
+
+
+.blog-card-header-image img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.blog-card-footer {
+    width: 90%;
+}
+
 .blog-card-footer h3 {
     font-weight: 500;
+    margin: 2%  0%;
 }
 
 .blog-card-footer p {
     font-weight: 200;
 }
 
+.blog-card-footer a {
+    text-decoration: none;
+    color: rgb(66, 132, 219);
+}
 
 
 
@@ -388,6 +453,22 @@ footer {
     border: #ffffff;
 }
 
+.footer-social i {
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 50%;
+    opacity:0.5
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.footer-links ul, .footer-links li, .footer-links a {
+    color: #ffffff;
+}
 
 /* ========================================================================================
 ===========================================RESPONSIVE========================================
