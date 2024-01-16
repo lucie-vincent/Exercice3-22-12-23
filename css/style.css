@@ -36,6 +36,7 @@ ul, li, a {
 header {
     align-items: center;
     min-width: 100vh;
+    min-height: 100vh;
 }
 
 nav {
@@ -46,7 +47,7 @@ nav {
 }
 
 #site-name {
-  font-size: 25px;
+  font-size: 2em;
   font-weight: 800;
 }
 
@@ -240,12 +241,12 @@ button:hover {
 
 .team-text {
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 3em;
 }
 
 .team-text h3 {
     font-size: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 0.5em;
 }
 
 .team-text p {
@@ -263,19 +264,25 @@ button:hover {
     gap: 2em;
 }
 
+
 .team-cards-card {
-    /* border: 1px solid red; */
-    width: 25em;
+    width: 20em;
     border-radius: 50%;
 }
 
-.team-card-image {
+.team-card-header {
+    margin-bottom: 1em;
+}
+
+.team-card-image-block {
+    width: 100%;
+    height: auto;
     border-radius: 50%;
-    margin: 2em;
+    position: relative;
     overflow: hidden;
 }
 
-.team-card-image img {
+.team-card-image-block img {
     width: 100%;
     height: auto;
     border-radius: 50%;
@@ -283,14 +290,49 @@ button:hover {
     transition: 1s;
 }
 
-.team-card-image img:hover {
+.team-card-image-block:hover img{
     transform: scale(1.1);
     filter: none;
 }
 
+
+.team-card-social {
+    position: absolute;
+    top: 100px;
+    left: -45px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 28px;
+    transition: 1s;
+}
+
+.team-card-social i {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.team-card-image-block:hover .team-card-social {
+    top: 72px;
+    left: 15px;
+}
+
+.team-card-social:hover {
+    cursor: pointer; 
+}
+
+.team-card-footer {
+    margin-top: 1em;
+}
+
+.team-card-footer h4 {
+    font-weight: 450;
+}
+
 .team-card-footer p {
     font-size: small;
-    font-weight: 200;
+    font-weight: 300;
     color: grey;
 }
 
@@ -381,11 +423,37 @@ button:hover {
     width: 80%;
     gap: 2em;
     margin: 5%;
+    overflow: hidden;
 }
 
 .blog-card-header {
-    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.blog-card-header img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-card-header-infos {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    transition: 0.5s;
+    border-radius: 10px;
+    opacity: 0;
+    /* visibility: hidden; */
+}
+
+.blog-card-header-infos:hover {
+    background-color: rgba(0, 0, 0, 0.4);
     background-size: cover;
+    opacity: 1;
+    /* visibility: visible; */
 }
 
 .blog-card-user-infos {
@@ -393,6 +461,8 @@ button:hover {
     flex-direction: row;
     gap: 5px;
     align-items: baseline;
+    font-weight: 500;
+    margin: 40px 25px 0px;
 }
 
 .blog-card-date-infos {
@@ -400,12 +470,7 @@ button:hover {
     flex-direction: row;
     gap: 5px;
     align-items: baseline;
-}
-
-
-.blog-card-header-image img {
-    border-radius: 10px;
-    width: 100%;
+    margin-left: 25px;
 }
 
 .blog-card-footer {
