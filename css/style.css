@@ -14,6 +14,7 @@
     font-family: "Poppins";
     background: radial-gradient(rgb(139, 195, 245),#1294b8);
     min-height: 100vh;
+    position: relative;
 }
 
 main {
@@ -24,6 +25,31 @@ main {
 ul, li, a {
     text-decoration: none;
     list-style: none;
+}
+
+#scroll-block {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    height: 100%;
+    
+}
+
+/* to hide the button when page first loaded */
+#scroll-block:before {
+    content: '';
+    display: block;
+    height: 100vh;
+    pointer-events: none;
+}
+
+/* fixed to right bottom of page */
+#scroll-block a {
+  position: sticky;
+  top: 88vh;
+  cursor: pointer;
+  font-size: 20px;
+  color: #418EF2;
 }
 
 /* ========================================================================================
