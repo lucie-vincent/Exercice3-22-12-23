@@ -555,6 +555,7 @@ button:hover {
     min-width: 100vh;
     background-color: rgba(128, 128, 128, 0.178);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -562,6 +563,12 @@ button:hover {
 .pricing-pricing {
     width: 40%;
     text-align: center;
+    margin: 0.4em 0em 1.7em;
+}
+
+.pricing-pricing p {
+    font-weight: 300;
+    font-size: 80%;
 }
 
 
