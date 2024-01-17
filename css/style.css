@@ -407,6 +407,7 @@ button:hover {
 
 #blog {
     min-width: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -420,6 +421,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     width: 80%;
+    height: 60%;
     gap: 2em;
     margin: 5%;
     overflow: hidden;
@@ -452,6 +454,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.4);
     background-size: cover;
     opacity: 1;
+    cursor: pointer;
     /* visibility: visible; */
 }
 
@@ -551,7 +554,7 @@ button:hover {
 
 /* --------------------------------CARDS---------------------------- */
 
-.pricing-cards-block {
+#pricing-cards-block {
     min-width: 100vh;
     background-color: rgba(128, 128, 128, 0.178);
     display: flex;
@@ -569,6 +572,7 @@ button:hover {
 .pricing-pricing p {
     font-weight: 300;
     font-size: 80%;
+    color: grey;
 }
 
 .pricing-cards {
@@ -583,12 +587,40 @@ button:hover {
     background-color: white;
     width: 33%;
     border-radius: 0.8em;
+    margin: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, 
+    rgba(0, 0, 0, 0.07) 0px 2px 2px, 
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, 
+    rgba(0, 0, 0, 0.07) 0px 8px 8px, 
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    transition: 1s;
+}
+
+.pricing-cards-card:hover {
+    transform: translateY(-20px);
 }
 
 .pricing-card-header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1em;
+    position: relative;
+}
+
+.sale-price {
+    position: absolute;
+    color: #ffffff;
+    background-color: #418EF2;
+    top: -16px;
+    right: -16px;
+    border-radius: 0em 0.8em;
+    font-size: 0.8em;
+    font-weight: 300;
+    height: 52px;
+    width: 45px;
+    text-align: center;
+    padding: 0.8em;
 }
 
 .pricing-card-header h4 {
@@ -607,6 +639,23 @@ span {
     font-size: 0.8em;
 }
 
+.pricing-card-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card-table table {
+    width: 100%;
+    padding: 1em;
+}
+
+.pricing-card-table tr {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4em 0em;
+}
+
 .pricing-card-table td {
     font-size: 0.8em;
 }
@@ -619,10 +668,23 @@ span {
     color: red;
 }
 
-.pricing-card-table tr {
+.pricing-card-link {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
 }
+
+.pricing-card-link a {
+    width: 100%;
+    border: 1px solid #418EF2;
+    border-radius: 0.2em;
+    background-color: #418EF2;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8em;
+    margin: 1em 0.8em;
+    padding: 0.4em;
+}
+
 
 /* ========================================================================================
 ===========================================FOOTER========================================
@@ -642,13 +704,17 @@ footer {
     padding: 3em;
 }
 
-.footer-social {
+#footer-social {
     display: flex;
     gap:2em;
     border: #ffffff;
 }
 
-.footer-social i {
+#footer-social a {
+    color: #ffffff;
+}
+
+#footer-social i {
     border: 1px solid white;
     padding: 8px;
     border-radius: 50%;
