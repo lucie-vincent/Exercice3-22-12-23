@@ -14,7 +14,6 @@
     font-family: "Poppins";
     background: radial-gradient(rgb(139, 195, 245),#1294b8);
     min-height: 100vh;
-    position: relative;
 }
 
 main {
@@ -36,21 +35,21 @@ ul, li, a {
 }
 
 /* to hide the button when page first loaded */
-#scroll-block:before {
+/* #scroll-block:before {
     content: '';
     display: block;
     height: 100vh;
     pointer-events: none;
-}
+} */
 
 /* fixed to right bottom of page */
-#scroll-block a {
+/* #scroll-block a {
   position: sticky;
   top: 88vh;
   cursor: pointer;
   font-size: 20px;
   color: #418EF2;
-}
+} */
 
 /* ========================================================================================
 ===========================================HEADER========================================
@@ -761,32 +760,207 @@ footer {
 ===========================================RESPONSIVE========================================
 ========================================================================================= */
 
-@media screen and (max-width: 700px) {
-    #wrapper {
+/* regle media + type de media (condition : breakpoint) */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    #container {
+        background: radial-gradient(rgb(139, 195, 245),#1294b8);
+        max-height: 100vh;
+        max-width: 100vh;
+        margin: 0;
         padding: 0;
     }
 
-    #container {
-        background: radial-gradient(rgb(139, 195, 245),#1294b8);
-    min-height: 100vh;
+    /* #nav-links {
+        display: block;
+        position: relative;
+        top: 50px;
+        left: 50px;
+        
+        z-index: 1;
+        
+        -webkit-user-select: none;
+        user-select: none;
     }
 
-    nav {
+    #nav-links a {
+    text-decoration: none;
+    color: #232323;
+    
+    transition: color 0.3s ease;
+    }
+
+    #nav-links a:hover {
+        color: tomato;
+    }
+
+
+    #nav-links input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        top: -7px;
+        left: -5px;
+        
+        cursor: pointer;
+        
+        opacity: 0; /* hide this */
+        /* z-index: 2; and place it over the hamburger 
+        
+    }
+
+/*
+ * Just a quick hamburger
+ */
+    /* #nav-links span
+    {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        
+        background: #cdcdcd;
+        border-radius: 3px;
+        
+        z-index: 1;
+    
+    
+    }
+
+    #nav-links span:first-child {
+    transform-origin: 0% 0%;
+    }
+
+    #nav-links span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+    } */
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+    /* #menu {
+        position: absolute;
+        width: 300px;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+        
+        background: #ededed;
+        list-style-type: none;
+
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    } */
+
+    /* #menu li {
+        padding: 10px 0;
+        font-size: 22px;
+    } */
+
+    /*
+    * And let's slide it in from the left
+    */
+    /* #nav-links input:checked ~ ul {
+        transform: none;
+    } */ 
+
+    
+    /* --------------------------------product features---------------------------- */
+    
+    #features-cards {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: auto;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    #header-description-block {
+    .product-features-text {
+        width: 70%;
+        text-align: center;
+    }
+
+    .product-features-text h3 {
+        font-size: 1.5em;
+    }
+
+    .features-cards-card {
+        padding: 0;
+        width: 85%;
+        height: 85%;
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: center;
     }
 
-    #header-text h2 {
-        font-size: 20px;
+    /* --------------------------------team---------------------------- */
+
+
+    #team {
+        padding: 2em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
-   
+    .team-text {
+        width: 80%;
+    }
+
+    .team-text h3 {
+        font-size: 1em;
+    }
+
+    #team-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    .team-cards-card {
+        width: 50%;
+    }
+
+
+    /* --------------------------------parallax---------------------------- */
+
+    .parallax {
+        width: 100%;
+        background-image: url(/img/parallax.png);
+
+    }
+
+    /* --------------------------------blog---------------------------- */
+
+    #blog {
+        width: 100%;
+        margin: 0%;
+    }
+
+    .blog-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .blog-cards-card {
+        width: 80%;
+    }
+
+    
+
+
+
+
+
+
+
 }
