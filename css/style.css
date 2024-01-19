@@ -761,14 +761,97 @@ footer {
 ========================================================================================= */
 
 /* regle media + type de media (condition : breakpoint) */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     #container {
         background: radial-gradient(rgb(139, 195, 245),#1294b8);
-        max-height: 100vh;
-        max-width: 100vh;
+        max-height: 100%; 
+        max-width: 100%;
         margin: 0;
         padding: 0;
     }
+
+    header {
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    nav {
+        width: 10%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 10px;
+    }
+
+    nav #site-name {
+        font-size: 1em;
+    }
+    
+    #menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu li a {
+        font-size: 0.4em;
+    }
+
+    #header-social ul {
+        visibility: hidden;
+    }
+
+    #header-description-block {
+        width: 20%;
+        height: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        top: 0;
+        padding: 0%;
+    }
+
+    #header-text h2 {
+        font-size: 1em;
+    }
+
+    #header-text p {
+        font-size: 0.5em;
+    }
+
+    #mail-subscribe {
+        width: 100px;
+        height: 50px;
+        padding: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mail-subscribe input, #mail-subscribe button {
+        padding: 0;
+    }
+
+    #mail-subscribe input::placeholder {
+        font-size: 0.7em;
+    }
+
+    #mail-subscribe button {
+        width: 50px;
+        font-size: 0.7em;
+    }
+
+    #header-illustration img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* --------------------------essai menu buger------------------------------- */
 
     /* #nav-links {
         display: block;
@@ -874,9 +957,12 @@ footer {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         margin: 0;
         padding: 0;
+        margin-bottom: 1em;
     }
 
     .product-features-text {
@@ -901,19 +987,29 @@ footer {
 
 
     #team {
-        padding: 2em 0;
+        padding: 0;
+        margin-bottom: 1em;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
+        background: radial-gradient(rgb(139, 195, 245),#1294b8);
+        color: #ffffff;
     }
 
+    
     .team-text {
         width: 80%;
+        color: #ffffff;
     }
 
     .team-text h3 {
         font-size: 1em;
+    }
+
+    .team-text p {
+        color: #ffffff;
+        font-weight: 200;
     }
 
     #team-cards {
@@ -928,6 +1024,10 @@ footer {
         width: 50%;
     }
 
+    .team-card-footer p {
+        color: #ffffff;
+    }
+
 
     /* --------------------------------parallax---------------------------- */
 
@@ -935,6 +1035,19 @@ footer {
         width: 100%;
         background-image: url(/img/parallax.png);
 
+    }
+
+    .parallax-text p {
+        margin: 5px 0px;
+    }
+
+    .parallax-link {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .parallax-link a {
+        padding: 5px 7px;
     }
 
     /* --------------------------------blog---------------------------- */
@@ -957,10 +1070,73 @@ footer {
 
     
 
+    /* --------------------------------pricing---------------------------- */
 
+    #pricing {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .pricing-block {
+       width: 100%;
+    }
+    
+    .pricing-block-description {
+        width: 70%;
+    }
+    
+    .pricing-block-image {
+        width: 30%;
+    }
+    
+    .pricing-cards-block {
+        width: 100%;
+    }
 
+    .pricing-pricing {
+        height: auto;
+        width: 50%;
+    }
 
+    .pricing-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .pricing-cards-card {
+        width: 100%;
+        margin: 1em;
+    }
+
+    /* --------------------------------footer---------------------------- */
+
+    footer {
+        width: 100%;
+        padding: 1.5em;
+    }
+
+    #footer-social {
+        font-size: 0.8em;
+    }
+
+    .footer-links span {
+        visibility: hidden;
+    }
+
+    .footer-links {
+        font-size: 0.8em;
+    }
+
+    small {
+        font-size: 0.7em;
+    }
 
 
 }
