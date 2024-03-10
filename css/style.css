@@ -26,30 +26,27 @@ ul, li, a {
     list-style: none;
 }
 
-#scroll-block {
-    position: absolute;
-    top: 0;
-    right: 15px;
-    height: 100%;
-    
+/*---SCROLL TO TOP---*/
+#scroll-up a{
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;    
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-/* to hide the button when page first loaded */
-/* #scroll-block:before {
-    content: '';
-    display: block;
-    height: 100vh;
-    pointer-events: none;
-} */
-
-/* fixed to right bottom of page */
-/* #scroll-block a {
-  position: sticky;
-  top: 88vh;
-  cursor: pointer;
-  font-size: 20px;
-  color: #418EF2;
-} */
+.scroll-up-icon i{
+    font-size: 2em;
+    padding: 0;
+}
 
 /* ========================================================================================
 ===========================================HEADER========================================
@@ -68,6 +65,12 @@ nav {
     flex-direction: row;
     align-items: baseline;
     justify-content: space-evenly;
+    width: 100%;
+}
+
+input#nav-check{
+    display: none;
+    cursor: pointer;
 }
 
 #site-name {
@@ -80,7 +83,7 @@ nav {
     color: #ffffff;
 }
 
-#nav-links ul, #nav-links li, #nav-links a {
+#menu, #menu li, #menu a {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 20px;
@@ -89,7 +92,7 @@ nav {
     color: #ffffff;
 }
 
-#nav-links a:hover {
+#menu a:hover {
     cursor: pointer;
     opacity: 0.75;
 }
@@ -145,7 +148,7 @@ form {
     margin: 15px;
 }
 
-input {
+header input {
     border-radius: 30px;
     padding: 8px;
     border: 1px solid grey;
@@ -781,31 +784,49 @@ footer {
         position: relative;
     }
 
-    nav {
-        width: 10%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
+    .nav-btn{
+        display: inline-block;
         position: absolute;
+        right: 0;
         top: 0;
-        left: 10px;
+        padding-top: 0.2rem;
     }
 
-    nav #site-name {
-        font-size: 1em;
+    .nav-btn label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
     }
-    
+
+    .nav-btn span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+
     #menu {
+        position: absolute;
         display: flex;
         flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        background-color: #1A237E;
+        height: 0;
+        transition: all 0.3s ease-in;
+        top: 40px;
+        left: 0;
+        overflow: hidden;
     }
 
-    #menu li a {
-        font-size: 0.4em;
+    #menu li {
+        width: 100%;
+        margin-top: 1.5rem;
     }
 
-    #header-social ul {
-        visibility: hidden;
+    #nav-check:checked ~ #menu {
+        height: calc(100vh - 50px);
     }
 
     #header-description-block {
@@ -817,138 +838,9 @@ footer {
         padding: 0%;
     }
 
-    #header-text h2 {
-        font-size: 1em;
-    }
-
-    #header-text p {
-        font-size: 0.5em;
-    }
-
-    #mail-subscribe {
-        width: 100px;
-        height: 50px;
-        padding: 0%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    #mail-subscribe input, #mail-subscribe button {
-        padding: 0;
-    }
-
-    #mail-subscribe input::placeholder {
-        font-size: 0.7em;
-    }
-
-    #mail-subscribe button {
-        width: 50px;
-        font-size: 0.7em;
-    }
-
-    #header-illustration img {
-        height: auto;
-        max-width: 100%;
-    }
-
-    /* --------------------------essai menu buger------------------------------- */
-
-    /* #nav-links {
-        display: block;
-        position: relative;
-        top: 50px;
-        left: 50px;
-        
-        z-index: 1;
-        
-        -webkit-user-select: none;
-        user-select: none;
-    }
-
-    #nav-links a {
-    text-decoration: none;
-    color: #232323;
-    
-    transition: color 0.3s ease;
-    }
-
-    #nav-links a:hover {
-        color: tomato;
-    }
-
-
-    #nav-links input {
-        display: block;
-        width: 40px;
-        height: 32px;
-        top: -7px;
-        left: -5px;
-        
-        cursor: pointer;
-        
-        opacity: 0; /* hide this */
-        /* z-index: 2; and place it over the hamburger 
-        
-    }
-
-/*
- * Just a quick hamburger
- */
-    /* #nav-links span
-    {
-        display: block;
-        width: 33px;
-        height: 4px;
-        margin-bottom: 5px;
-        position: relative;
-        
-        background: #cdcdcd;
-        border-radius: 3px;
-        
-        z-index: 1;
-    
-    
-    }
-
-    #nav-links span:first-child {
-    transform-origin: 0% 0%;
-    }
-
-    #nav-links span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-    } */
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-    /* #menu {
-        position: absolute;
-        width: 300px;
-        margin: -100px 0 0 -50px;
-        padding: 50px;
-        padding-top: 125px;
-        
-        background: #ededed;
-        list-style-type: none;
-
-        transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
-        
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    } */
-
-    /* #menu li {
-        padding: 10px 0;
-        font-size: 22px;
-    } */
-
-    /*
-    * And let's slide it in from the left
-    */
-    /* #nav-links input:checked ~ ul {
-        transform: none;
-    } */ 
+    #header-social ul {
+        visibility: hidden;
+    } 
 
     
     /* --------------------------------product features---------------------------- */
